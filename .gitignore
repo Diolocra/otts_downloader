@@ -1,0 +1,52 @@
+cat > .gitignore << 'EOF'
+# Конфиг с приватными данными (cookies, appid)
+otts_config.json
+
+# Логи
+*.log
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Виртуальное окружение
+venv/
+env/
+.venv/
+
+# Папки с загруженными данными (тяжёлые, не нужны в git)
+catalog/
+Реестр ОТТС_*/
+
+# Файлы состояния
+processed_ids.json
+catalog_progress.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store
+
+# Сборки PyInstaller
+build/
+dist/
+*.spec
+EOF
+# Временные файлы редакторов
+*.swp
+*.swo
+*~
+*.tmp
+
+# Промпты и временные текстовые файлы
+промпт.txt
+Qwen_python_*.py
+
+# Старые версии парсеров (на всякий случай)
+parser[2-9].py
+parser[0-9][0-9].py
